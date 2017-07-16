@@ -140,7 +140,7 @@ public class create_piece extends JPanel implements ActionListener, ItemListener
 		if (e.getSource() == pick_file) {			 // if the user presses the browse button
 			//set the initial directory
 			String path = System.getProperty("user.dir");
-		    path = path + "/bin/Resources/Pieces/";
+		    path = path + "/bin/resources/pieces/";
 		    File new_file = new File(path); 
 			fc.setCurrentDirectory(new_file);
 			
@@ -155,7 +155,7 @@ public class create_piece extends JPanel implements ActionListener, ItemListener
 	   }else if(e.getSource() == pick_file2){
 		   //set the initial directory
 		   String path = System.getProperty("user.dir");
-	       path = path + "/bin/Resources/Images/";
+	       path = path + "/bin/resources/images/";
 	       File new_file = new File(path); 
 		   fc.setCurrentDirectory(new_file);
 		   fc.addChoosableFileFilter(new ImageFilter());
