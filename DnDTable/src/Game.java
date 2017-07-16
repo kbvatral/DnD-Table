@@ -378,6 +378,7 @@ public class Game extends JFrame implements MouseListener, MouseMotionListener, 
 	    	    	 }
 	    	     }catch(Exception e){
 	    	    	 JOptionPane.showMessageDialog(this, "Sorry, there was an unexpected error", "Error", JOptionPane.ERROR_MESSAGE);
+	    	    	 //e.printStackTrace();
 	    	     }
     		 }
     	 }
@@ -391,7 +392,7 @@ public class Game extends JFrame implements MouseListener, MouseMotionListener, 
     	 try{
 	    	 File file = dialog.getFile(); //user selected file
 	    	 String path = System.getProperty("user.dir");
-	    	 path = path + "/bin/Resources/Images/" + file.getName(); //create path for resource
+	    	 path = path + "/bin/resources/images/" + file.getName(); //create path for resource
 	    	 File new_file = new File(path); //create a file in the new location
 	    	 Files.copy(file.toPath(), new_file.toPath(), StandardCopyOption.REPLACE_EXISTING); //copy existing file to new file
 
@@ -428,6 +429,7 @@ public class Game extends JFrame implements MouseListener, MouseMotionListener, 
 
     	 }catch(Exception e){
 	    	 JOptionPane.showMessageDialog(this, "Sorry, there was an unexpected error", "Error", JOptionPane.ERROR_MESSAGE);
+	    	 e.printStackTrace();
     	 }
 
 
